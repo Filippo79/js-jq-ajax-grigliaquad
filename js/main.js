@@ -5,13 +5,15 @@ $(document).ready(function() {
 //Il numero ottenuto appare al centro del quadrato.
 
     $('.square').click(function(){
-        console.log($(this));
+        //console.log($(this));
+        var quadratoCliccato = $(this);
         $.ajax({
             url:'https://flynn.boolean.careers/exercises/api/random/int',// richiamo un url che genera numeri randon
             method:'GET',
             success: function (data) {
                 var numeroBoolean = data.response;
-                console.log(numeroBoolean);
+                //console.log(numeroBoolean);
+                colore(quadratoCliccato , numeroBoolean);
 
             },
             error: function() {
@@ -20,14 +22,16 @@ $(document).ready(function() {
         });
     });
 
-    function colore(numeroBoolean){
+    function colore(quadratoCliccato , numeroBoolean){
         if(numeroBoolean <= 5) {
-            $(this).addClass('giallo')
+            console.log(numeroBoolean);
+            $('.square').append(numeroBoolean);
+            $(quadratoCliccato).addClass('giallo')
         }else if( numeroBoolean > 5) {
-            $(this).addClass('verde')
-
+            console.log(numeroBoolean);
+            $('.square').append(numeroBoolean);
+            $(quadratoCliccato).addClass('verde')
         }
-
     }
 
 
