@@ -25,30 +25,10 @@ $(document).ready(function() {
     function colore(quadratoCliccato , numeroBoolean){
         if(numeroBoolean <= 5) {
             console.log(numeroBoolean);
-            $('.square').append(numeroBoolean);
-            $(quadratoCliccato).addClass('giallo')
+            $(quadratoCliccato).addClass('giallo').append(numeroBoolean);
         }else if( numeroBoolean > 5) {
-            console.log(numeroBoolean);
-            $('.square').append(numeroBoolean);
-            $(quadratoCliccato).addClass('verde')
+            console.log(numeroBoolean);    
+            $(quadratoCliccato).addClass('verde').append(numeroBoolean);
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
