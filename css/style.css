@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.square {
+    border: 1px solid black;
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+}
+
+.giallo {
+    background-color: yellow;
+}
+
+.verde {
+    background-color: green;
+}
